@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Parisienne-Regular';
+  src: url("../webfonts/Parisienne-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Kalam';
+  src: url("../webfonts/Kalam-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../webfonts/RobotoCondensed-Regular.ttf") format("truetype"); }
+body {
+  padding: 1px 0px;
+  margin: 0px 0px; }
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #b118c8;
+  position: fixed;
+  font-family: "Kalam";
+  color: #f9f8f8;
+  border-bottom: white solid 2px; }
+  header nav span {
+    float: left;
+    position: relative;
+    top: 23.3333333333px;
+    left: 17.5px;
+    font-size: 20px; }
+  header nav ul {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 130px;
+    margin-top: 0px;
+    font-family: "Roboto Condensed"; }
+    header nav ul li {
+      list-style: none;
+      padding: 23.3333333333px 20px; }
+      header nav ul li:hover {
+        background-color: #f9f8f8;
+        border-bottom: #bbb5bd solid 4px;
+        color: #b118c8; }
+
+main {
+  width: 100%;
+  height: 500px;
+  background-color: #b118c8;
+  color: #f9f8f8; }
+  main section {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #aa6da3, white); }
+    main section div.bio-container {
+      width: 50%;
+      position: relative;
+      top: 160px;
+      left: 50px; }
+      main section div.bio-container h1 {
+        font-family: "Parisienne-Regular";
+        font-size: 60px; }
+      main section div.bio-container h3 {
+        margin-top: -48px;
+        font-family: "Kalam"; }
+      main section div.bio-container p {
+        font-family: "Roboto Condensed";
+        width: 75%; }
+      main section div.bio-container button {
+        font-family: "Kalam";
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        padding: 5px;
+        background-color: #b118c8;
+        border-radius: 5px;
+        box-shadow: bottom 2px; }
+        main section div.bio-container button:hover {
+          background-color: #cdd3ce;
+          color: #b118c8; }
+        main section div.bio-container button :visited {
+          border: #aa6da3 solid 1px; }
+
+/*# sourceMappingURL=index.css.map */
