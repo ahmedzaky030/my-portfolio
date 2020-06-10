@@ -1,8 +1,8 @@
-$primary-color:#b118c8;
-$secondary-color:#aa6da3;
-$third-color:#bbb5bd;
-$fourth-color:#cdd3ce;
-$fifth-color:#f9f8f8;
+$primary-color:#28112b;
+$secondary-color:#453643;
+$third-color:#5e5d5c;
+$fourth-color:#788475;
+$fifth-color:#8DAA91;
 $header-height: 70px;
 
 @font-face {
@@ -38,7 +38,7 @@ header {
     position: fixed;
     font-family: $subheading-font;
     color: $fifth-color;
-    border-bottom: white solid 2px;
+    border-bottom: $fourth-color solid 2px;
 
     & nav {
         & span {
@@ -115,7 +115,7 @@ main {
 
     & section.bio {
         @extend %section-shared;
-        background-image: linear-gradient(to right, $secondary-color, white);
+        background-image: linear-gradient(to right, $secondary-color, $fifth-color);
 
         & div.bio-container {
 
@@ -148,7 +148,7 @@ main {
                 height: 50px;
                 padding: 5px;
                 margin-top: 10px;
-                background-color: $primary-color;
+                background-color: $fourth-color;
                 border-radius: 5px;
                 box-shadow: bottom 2px;
 
@@ -168,7 +168,7 @@ main {
     
     & section.skills {
         @extend %section-shared;
-        background-image: linear-gradient(to right, $third-color, white);
+        background-image: linear-gradient(to right, $secondary-color, $third-color);
         & h1 {
             font-family: $heading-font;
             @extend %section-align-content;
@@ -251,31 +251,31 @@ main {
 
     & section.experience {
         @extend %section-shared;
-
+        background-image: linear-gradient(to right, $secondary-color, $fourth-color);
         & h1{
             font-family: $heading-font;
             @extend %section-align-content;
             top:50px;
             font-size: 60px;
-            color:$primary-color;
+            color:$fifth-color;
         }
 
         & div.timeline {
             width: 90%;
             height: 5px;
             top:80px;
-            background-color : $secondary-color;
+            background-color : $fifth-color;
             @extend %section-align-content;
 
             & div.point-circle {
                 width:50px;
                 height:50px;
                 border-radius: 50%;
-                background-color: $third-color;
+                background-color: $fifth-color;
                 display: inline-block;
                 position: relative;
                 top:-24px;
-                & span {
+                & > span {
                     width: 30px;
                     height: 20px;
                     position: relative;
@@ -285,8 +285,18 @@ main {
                     background-color: $primary-color;
                     visibility: hidden;
                 }
-                
-               
+
+                & > div.arrow {
+                    width: 0px;
+                    height: 0;
+                    border-left: 17px solid transparent;
+                    border-right: 17px solid transparent;
+                    /* border-top-left-radius: 10px; */
+                    border-bottom: 35px solid $fifth-color;
+                    position: absolute;
+                    top: 55px;
+                    visibility: hidden;
+                }
 
                 & img {
                     width: 50px;
@@ -297,36 +307,84 @@ main {
                     border: $primary-color solid 1px;
                 }
 
-                & div.description {
-                    width: 90vw;
-                    height: 50vh;
-                    border: black solid 2px;
-                    background-color: brown;
-                    position: absolute;
-                    top: 90px;
-                    color: black;
-                    visibility: hidden;
-
-                    & h3{
-                        font-family: $subheading-font;
-                    }
-                }
+                
 
                 &:hover span  {
                     visibility: visible;
                 }
 
-                &:hover div.description{
+                &:hover div.arrow {
+                    visibility: visible;
+                }
+
+                &:hover + div.description {
                     visibility: visible;
                 }
 
                 
             }
 
+            & div.description {
+                width: 93vw;
+                height: fit-content;
+                border-radius: 10px;
+                box-shadow: 26px 20px 30px $secondary-color;
+                // background-image: radial-gradient(circle , $fifth-color , $fourth-color);
+                background-color: $fifth-color;
+                position: absolute;
+                top: 65px;
+                color: $secondary-color;
+                visibility: hidden;
+
+                
+
+                & div.title {
+                    display: flex;
+                    flex-direction: row;
+                    border-bottom: $secondary-color solid 5px;
+                    justify-content: space-between;
+                    font-family: $subheading-font;
+                    text-transform: capitalize;
+                    & h3{
+                        margin: 5px 10px;
+                        
+                    }
+
+                    & span{
+                        margin: 5px 20px;
+                        font-weight: bolder;
+                        font-size: 15px;
+
+                    }
+                }
+                
+
+                & ul{
+                    font-family: $paragraph-font;
+                    margin-left: 20px;
+                    color: $primary-color;
+                    width: fit-content;
+                    height: fit-content;
+                    & li{
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            
+
+
+
+            
+
             @for $var from 2011 to 2021 {
                 
                 .y-#{$var} {
                     left: calc((#{$var} - 2011) / 10 * 70%); 
+                }
+
+                .y-#{$var}-a {
+                    left: calc(calc((#{$var} - 2011) / 10 ) + 2px); 
                 }
 
                 
