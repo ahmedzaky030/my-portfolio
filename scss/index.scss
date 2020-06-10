@@ -5,17 +5,17 @@ $fourth-color:#cdd3ce;
 $fifth-color:#f9f8f8;
 $header-height: 70px;
 
-@font-face{
+@font-face {
     font-family: 'Parisienne-Regular';
     src: url('../webfonts/Parisienne-Regular.ttf') format('truetype');
 }
 
-@font-face{
+@font-face {
     font-family: 'Kalam';
     src: url('../webfonts/Kalam-Regular.ttf') format('truetype');
 }
 
-@font-face{
+@font-face {
     font-family: 'Roboto Condensed';
     src: url('../webfonts/RobotoCondensed-Regular.ttf') format('truetype');
 }
@@ -25,21 +25,23 @@ $subheading-font: 'Kalam';
 $paragraph-font:'Roboto Condensed';
 
 
-body{
-    padding: 1px 0px;
-    margin: 0px 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 header {
     width: 100%;
     height: $header-height;
-    background-color:  $primary-color;
+    background-color: $primary-color;
     position: fixed;
     font-family: $subheading-font;
     color: $fifth-color;
     border-bottom: white solid 2px;
-    
-    & nav{
-        & span{
+
+    & nav {
+        & span {
             float: left;
             position: relative;
             top: $header-height / 3;
@@ -48,19 +50,20 @@ header {
 
         }
 
-        & ul{
-            float:right;
+        & ul {
+            float: right;
             display: flex;
             flex-direction: row;
             position: relative;
-            right:130px;
+            right: 130px;
             margin-top: 0px;
             font-family: $paragraph-font;
-            
-            & li{
+
+            & li {
                 list-style: none;
-                padding:  $header-height / 3  20px;
-                &:hover{
+                padding: $header-height / 3 20px;
+
+                &:hover {
                     background-color: $fifth-color;
                     border-bottom: $third-color solid 4px;
                     color: $primary-color;
@@ -68,61 +71,275 @@ header {
             }
         }
 
-        
+
     }
-        
-        
+
+
+}
+
+%section-shared {
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes border-increase {
+    0% {
+        border-top: blue solid 1px;
+
+    }
+
+    25% {
+        border-right: blue solid 1px;
+    }
+
+    50% {
+        border-bottom: blue solid 1px;
+    }
+
+    100% {
+        border-left: blue solid 1px;
+    }
+}
+
+%section-align-content{
+    position: relative;
+    left: 50px;
+    width:90%;
 }
 
 main {
     width: 100%;
     height: 500px;
-    background-color:  $primary-color;
+    background-color: $primary-color;
     color: $fifth-color;
-    & section{
-        width: 100%;
-        height: 100vh;
-        background-image: linear-gradient(to right , $secondary-color , white) ;
+
+    & section.bio {
+        @extend %section-shared;
+        background-image: linear-gradient(to right, $secondary-color, white);
+
         & div.bio-container {
-            
+
             width: 50%;
             position: relative;
-            top:90px + $header-height;
-            left:50px;
-            & h1{
+            top: 90px + $header-height;
+            left: 50px;
+
+            & h1 {
                 font-family: $heading-font;
                 font-size: 60px;
             }
-            & h3{
-                margin-top: -48px;
+
+            & h3 {
                 font-family: $subheading-font;
             }
-            & p{
+
+            & p {
                 font-family: $paragraph-font;
                 width: 75%;
-                
+
             }
-            & button{
+
+            & button {
                 font-family: $subheading-font;
                 font-size: 16px;
                 font-weight: bold;
                 text-align: center;
                 width: 100px;
-                height:50px;
+                height: 50px;
                 padding: 5px;
+                margin-top: 10px;
                 background-color: $primary-color;
                 border-radius: 5px;
                 box-shadow: bottom 2px;
 
-                &:hover{
+                &:hover {
                     background-color: $fourth-color;
-                    color:$primary-color;
+                    color: $primary-color;
                 }
-                & :visited{
-                    border: $secondary-color solid 1px ;
+
+                & :visited {
+                    border: $secondary-color solid 1px;
 
                 }
             }
         }
+    }
+
+    
+    & section.skills {
+        @extend %section-shared;
+        background-image: linear-gradient(to right, $third-color, white);
+        & h1 {
+            font-family: $heading-font;
+            @extend %section-align-content;
+            top:50px;
+            font-size: 60px;
+        }
+        & hr{
+            @extend %section-align-content;
+            top:60px;
+        }
+        & div.skills-container {
+            @extend %section-align-content;
+            position: relative;
+            top: 90px;
+            left: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        
+
+            & div.skill-item {
+                margin: 20px 0;
+                width: 230px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: $fifth-color;
+                display: grid;
+                grid-template-columns: 50px auto;
+                grid-template-rows: auto auto;
+                
+                & div.skill-icon {
+                    grid-column: 1 / 2;
+                    grid-row: 1/3;
+                    
+                    border-radius: 50%;
+                    height:50px;
+                    & img {
+                        height: inherit;
+                        width:inherit;
+                    }
+                }
+
+                & div.skill-name {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                    text-transform: capitalize;
+                    color:$secondary-color;
+                    padding-left: 5px;
+                }
+
+                & div.skill-value {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                    width: 80%;
+                    height: 5px;
+                    background-color: $secondary-color;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    animation-name: skill-progress-bar;
+                    animation-duration: 2s;
+                    animation-delay: 1s;
+                    
+                }
+               
+            }
+        }
+
+
+
+        @keyframes skill-progress-bar {
+            from { width: 1%  };
+            to { width: 80% };
+        }
+
+
+
+    }
+
+    & section.experience {
+        @extend %section-shared;
+
+        & h1{
+            font-family: $heading-font;
+            @extend %section-align-content;
+            top:50px;
+            font-size: 60px;
+            color:$primary-color;
+        }
+
+        & div.timeline {
+            width: 90%;
+            height: 5px;
+            top:80px;
+            background-color : $secondary-color;
+            @extend %section-align-content;
+
+            & div.point-circle {
+                width:50px;
+                height:50px;
+                border-radius: 50%;
+                background-color: $third-color;
+                display: inline-block;
+                position: relative;
+                top:-24px;
+                & span {
+                    width: 30px;
+                    height: 20px;
+                    position: relative;
+                    border-radius: 5px;
+                    top: -18px;
+                    left: 9px;
+                    background-color: $primary-color;
+                    visibility: hidden;
+                }
+                
+               
+
+                & img {
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    position: absolute;
+                    border: $primary-color solid 1px;
+                }
+
+                & div.description {
+                    width: 90vw;
+                    height: 50vh;
+                    border: black solid 2px;
+                    background-color: brown;
+                    position: absolute;
+                    top: 90px;
+                    color: black;
+                    visibility: hidden;
+
+                    & h3{
+                        font-family: $subheading-font;
+                    }
+                }
+
+                &:hover span  {
+                    visibility: visible;
+                }
+
+                &:hover div.description{
+                    visibility: visible;
+                }
+
+                
+            }
+
+            @for $var from 2011 to 2021 {
+                
+                .y-#{$var} {
+                    left: calc((#{$var} - 2011) / 10 * 70%); 
+                }
+
+                
+
+                
+
+                
+            }
+        }
+    }
+
+    & section.pricing {
+        @extend %section-shared;
+        background-image: linear-gradient(to right, $third-color, white);
     }
 }
