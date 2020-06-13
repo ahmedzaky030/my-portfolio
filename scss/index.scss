@@ -101,10 +101,10 @@ header {
     }
 }
 
-%section-align-content{
+%section-align-content {
     position: relative;
     left: 50px;
-    width:90%;
+    width: 90%;
 }
 
 main {
@@ -165,20 +165,23 @@ main {
         }
     }
 
-    
+
     & section.skills {
         @extend %section-shared;
         background-image: linear-gradient(to right, $secondary-color, $third-color);
+
         & h1 {
             font-family: $heading-font;
             @extend %section-align-content;
-            top:50px;
+            top: 50px;
             font-size: 60px;
         }
-        & hr{
+
+        & hr {
             @extend %section-align-content;
-            top:60px;
+            top: 60px;
         }
+
         & div.skills-container {
             @extend %section-align-content;
             position: relative;
@@ -188,8 +191,8 @@ main {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-            
-        
+
+
 
             & div.skill-item {
                 margin: 20px 0;
@@ -200,16 +203,17 @@ main {
                 display: grid;
                 grid-template-columns: 50px auto;
                 grid-template-rows: auto auto;
-                
+
                 & div.skill-icon {
                     grid-column: 1 / 2;
                     grid-row: 1/3;
-                    
+
                     border-radius: 50%;
-                    height:50px;
+                    height: 50px;
+
                     & img {
                         height: inherit;
-                        width:inherit;
+                        width: inherit;
                     }
                 }
 
@@ -217,7 +221,7 @@ main {
                     grid-column: 2 / 3;
                     grid-row: 1 / 2;
                     text-transform: capitalize;
-                    color:$secondary-color;
+                    color: $secondary-color;
                     padding-left: 5px;
                 }
 
@@ -232,50 +236,64 @@ main {
                     animation-name: skill-progress-bar;
                     animation-duration: 2s;
                     animation-delay: 1s;
-                    
+
                 }
-               
+
             }
         }
 
 
 
         @keyframes skill-progress-bar {
-            from { width: 1%  };
-            to { width: 80% };
+            from {
+                width: 1%
+            }
+
+            ;
+
+            to {
+                width: 80%
+            }
+
+            ;
         }
 
 
 
     }
 
+    $person-height: 160px;
+    $person-width: 180px;
+
     & section.experience {
         @extend %section-shared;
         background-image: linear-gradient(to right, $secondary-color, $fourth-color);
-        & h1{
+
+        & h1 {
             font-family: $heading-font;
             @extend %section-align-content;
-            top:50px;
+            top: 50px;
             font-size: 60px;
-            color:$fifth-color;
+            color: $fifth-color;
         }
 
         & div.timeline {
             width: 90%;
             height: 5px;
-            top:80px;
-            background-color : $fifth-color;
+            top: 80px;
+            background-color: $fifth-color;
             @extend %section-align-content;
 
             & div.point-circle {
-                width:50px;
-                height:50px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
                 background-color: $fifth-color;
                 display: inline-block;
                 position: relative;
-                top:-24px;
-                & > span {
+                top: -24px;
+
+                &>span {
                     width: 30px;
                     height: 20px;
                     position: relative;
@@ -307,9 +325,9 @@ main {
                     border: $primary-color solid 1px;
                 }
 
-                
 
-                &:hover span  {
+
+                &:hover span {
                     visibility: visible;
                 }
 
@@ -321,7 +339,11 @@ main {
                     visibility: visible;
                 }
 
-                
+                &:hover + div.description + div.recommend-container {
+                    visibility: visible;
+                }
+
+
             }
 
             & div.description {
@@ -336,7 +358,7 @@ main {
                 color: $secondary-color;
                 visibility: hidden;
 
-                
+
 
                 & div.title {
                     display: flex;
@@ -345,59 +367,212 @@ main {
                     justify-content: space-between;
                     font-family: $subheading-font;
                     text-transform: capitalize;
-                    & h3{
+
+                    & h3 {
                         margin: 5px 10px;
-                        
+
                     }
 
-                    & span{
+                    & span {
                         margin: 5px 20px;
                         font-weight: bolder;
                         font-size: 15px;
 
                     }
                 }
-                
 
-                & ul{
+
+                & ul {
                     font-family: $paragraph-font;
                     margin-left: 20px;
                     color: $primary-color;
                     width: fit-content;
                     height: fit-content;
-                    & li{
+
+                    & li {
                         margin: 10px 0;
                     }
                 }
+
+
             }
 
-            
+            & div.recommend-container {
+                width: 104%;
+                height: 220px;
+                position: absolute;
+                top: 200px;
+                z-index: 5;
+                visibility: hidden;
+                display: flex;
+
+                & div.container {
+                    width: 70%;
+                    height: 70%;
+                    margin: 0 auto;
+                    display: flex;
+                    position: relative;
+                    top: 50px;
 
 
 
-            
+                    & div.person {
+                        height: $person-height;
+                        width: $person-width;
+                        // background-color: #000;
+                        
+                        
+
+
+                        & a {
+                            width: 100%;
+                            height: 100%;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            color: $fifth-color;
+
+                            & img {
+
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                
+
+                            }
+
+                            & h3 {
+                                font-family: $subheading-font;
+                                display: inline-block;
+                                
+                            }
+
+                            & p {
+                                font-family: $paragraph-font;
+                                font-size: 16px;
+                                display: inline-block;
+                                
+                            }
+                        }
+
+                    }
+
+                    & div.recommendation {
+                        height: fit-content;
+                        width: 70%;
+                        padding: 1em 10px;
+                        margin-top: 1em;
+                        border: 2px solid $fourth-color;
+                        border-radius: 15px;
+                        background-color: #5e5d5c;
+
+                        & :before {
+                            width:10px;
+                            height: 10px;
+                            content: " ssssssss";
+                            border-left: 5px solid $fourth-color;
+                            border-top: 1px solid transparent ;
+                            border-bottom: 1px solid transparent;
+                            background-color: #28112b;
+                        }
+
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
 
             @for $var from 2011 to 2021 {
-                
+
                 .y-#{$var} {
-                    left: calc((#{$var} - 2011) / 10 * 70%); 
+                    left: calc((#{$var} - 2011) / 10 * 70%);
                 }
 
                 .y-#{$var}-a {
-                    left: calc(calc((#{$var} - 2011) / 10 ) + 2px); 
+                    left: calc(calc((#{$var} - 2011) / 10) + 2px);
                 }
 
-                
 
-                
 
-                
+
+
+
             }
         }
     }
 
-    & section.pricing {
+    & section.services {
         @extend %section-shared;
         background-image: linear-gradient(to right, $third-color, white);
+        & div.service-container {
+            width: 90%;
+            height: 80%;
+            background-color: #788475;
+            position: relative;
+            top:5%;
+            left:5%;
+            border-radius: 15px;
+
+            & div.tabs {
+                width: 100%; 
+                height: 75px;
+                background-color: #453643;
+                border-bottom: 5px solid $primary-color;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                & ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+
+
+                    & li {
+                        padding: 25px 50px;
+                        border-right: 2px solid $fifth-color ;
+                        background-image: linear-gradient(to top, $primary-color, $third-color);
+                        font-family: $subheading-font;
+                        
+                        //background-color: $secondary-color;
+                        
+                        
+                        
+                        &:active {
+                            background-color: $fifth-color;
+                        }
+
+
+
+                        &:hover {
+                            //background-color: $third-color;
+                            background-image: linear-gradient(to top, $primary-color, $fifth-color);
+                        }
+                    }
+                }
+            }
+
+            & div.tab-content {
+                width: 90%;
+                position: absolute;
+                left:5%;
+                top:calc(75px + 25px); 
+                height: 50%;
+                //background-color: #fff;
+                position: absolute;
+
+                & input[type="radio"]:checked {
+                    background-color: $fifth-color;
+                }
+            }
+
+
+        }
     }
 }

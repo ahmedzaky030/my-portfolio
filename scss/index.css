@@ -42,7 +42,7 @@ header {
         border-bottom: #5e5d5c solid 4px;
         color: #28112b; }
 
-main section.bio, main section.skills, main section.experience, main section.pricing {
+main section.bio, main section.skills, main section.experience, main section.services {
   width: 100%;
   height: 100vh; }
 
@@ -204,6 +204,8 @@ main {
           visibility: visible; }
         main section.experience div.timeline div.point-circle:hover + div.description {
           visibility: visible; }
+        main section.experience div.timeline div.point-circle:hover + div.description + div.recommend-container {
+          visibility: visible; }
       main section.experience div.timeline div.description {
         width: 93vw;
         height: fit-content;
@@ -235,47 +237,137 @@ main {
           height: fit-content; }
           main section.experience div.timeline div.description ul li {
             margin: 10px 0; }
+      main section.experience div.timeline div.recommend-container {
+        width: 104%;
+        height: 220px;
+        position: absolute;
+        top: 200px;
+        z-index: 5;
+        visibility: hidden;
+        display: flex; }
+        main section.experience div.timeline div.recommend-container div.container {
+          width: 70%;
+          height: 70%;
+          margin: 0 auto;
+          display: flex;
+          position: relative;
+          top: 50px; }
+          main section.experience div.timeline div.recommend-container div.container div.person {
+            height: 160px;
+            width: 180px; }
+            main section.experience div.timeline div.recommend-container div.container div.person a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: #8DAA91; }
+              main section.experience div.timeline div.recommend-container div.container div.person a img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%; }
+              main section.experience div.timeline div.recommend-container div.container div.person a h3 {
+                font-family: "Kalam";
+                display: inline-block; }
+              main section.experience div.timeline div.recommend-container div.container div.person a p {
+                font-family: "Roboto Condensed";
+                font-size: 16px;
+                display: inline-block; }
+          main section.experience div.timeline div.recommend-container div.container div.recommendation {
+            height: fit-content;
+            width: 70%;
+            padding: 1em 10px;
+            margin-top: 1em;
+            border: 2px solid #788475;
+            border-radius: 15px;
+            background-color: #5e5d5c; }
+            main section.experience div.timeline div.recommend-container div.container div.recommendation :before {
+              width: 10px;
+              height: 10px;
+              content: " ssssssss";
+              border-left: 5px solid #788475;
+              border-top: 1px solid transparent;
+              border-bottom: 1px solid transparent;
+              background-color: #28112b; }
       main section.experience div.timeline .y-2011 {
         left: calc((2011 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2011-a {
-        left: calc(calc((2011 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2011 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2012 {
         left: calc((2012 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2012-a {
-        left: calc(calc((2012 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2012 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2013 {
         left: calc((2013 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2013-a {
-        left: calc(calc((2013 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2013 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2014 {
         left: calc((2014 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2014-a {
-        left: calc(calc((2014 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2014 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2015 {
         left: calc((2015 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2015-a {
-        left: calc(calc((2015 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2015 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2016 {
         left: calc((2016 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2016-a {
-        left: calc(calc((2016 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2016 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2017 {
         left: calc((2017 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2017-a {
-        left: calc(calc((2017 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2017 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2018 {
         left: calc((2018 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2018-a {
-        left: calc(calc((2018 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2018 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2019 {
         left: calc((2019 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2019-a {
-        left: calc(calc((2019 - 2011) / 10 ) + 2px); }
+        left: calc(calc((2019 - 2011) / 10) + 2px); }
       main section.experience div.timeline .y-2020 {
         left: calc((2020 - 2011) / 10 * 70%); }
       main section.experience div.timeline .y-2020-a {
-        left: calc(calc((2020 - 2011) / 10 ) + 2px); }
-  main section.pricing {
+        left: calc(calc((2020 - 2011) / 10) + 2px); }
+  main section.services {
     background-image: linear-gradient(to right, #5e5d5c, white); }
+    main section.services div.service-container {
+      width: 90%;
+      height: 80%;
+      background-color: #788475;
+      position: relative;
+      top: 5%;
+      left: 5%;
+      border-radius: 15px; }
+      main section.services div.service-container div.tabs {
+        width: 100%;
+        height: 75px;
+        background-color: #453643;
+        border-bottom: 5px solid #28112b;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px; }
+        main section.services div.service-container div.tabs ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: row; }
+          main section.services div.service-container div.tabs ul li {
+            padding: 25px 50px;
+            border-right: 2px solid #8DAA91;
+            background-image: linear-gradient(to top, #28112b, #5e5d5c);
+            font-family: "Kalam"; }
+            main section.services div.service-container div.tabs ul li:active {
+              background-color: #8DAA91; }
+            main section.services div.service-container div.tabs ul li:hover {
+              background-image: linear-gradient(to top, #28112b, #8DAA91); }
+      main section.services div.service-container div.tab-content {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: calc(75px + 25px);
+        height: 50%;
+        position: absolute; }
+        main section.services div.service-container div.tab-content input[type="radio"]:checked {
+          background-color: #8DAA91; }
 
 /*# sourceMappingURL=index.css.map */
