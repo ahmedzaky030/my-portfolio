@@ -361,7 +361,7 @@ main {
             main section.services div.service-container div.tabs ul li:hover {
               background-image: linear-gradient(to top, #28112b, #8DAA91); }
       main section.services div.service-container div.tab-content {
-        width: 90%;
+        width: 100%;
         position: absolute;
         left: 5%;
         top: calc(75px + 25px);
