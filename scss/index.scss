@@ -121,7 +121,7 @@ main {
 
             width: 50%;
             position: relative;
-            top: 90px + $header-height;
+            top: 90px ;
             left: 50px;
 
             & h1 {
@@ -560,12 +560,13 @@ main {
 
             & div.tab-content {
                 width: 100%;
-                position: absolute;
+                
                 left:5%;
                 top:calc(75px + 25px); 
                 height: 50%;
                 //background-color: #fff;
                 position: absolute;
+                display: none;
 
                 & input[type="radio"]:checked {
                     background-color: $fifth-color;
@@ -575,4 +576,8 @@ main {
 
         }
     }
+}
+
+.active {
+    display: block;
 }
