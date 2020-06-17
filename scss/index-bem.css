@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Parisienne-Regular';
+  src: url("../webfonts/Parisienne-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Kalam';
+  src: url("../webfonts/Kalam-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../webfonts/RobotoCondensed-Regular.ttf") format("truetype"); }
+.bio, .skills {
+  width: 100%;
+  height: 100vh;
+  top: 0px; }
+
+@keyframes border-increase {
+  0% {
+    border-top: blue solid 1px; }
+  25% {
+    border-right: blue solid 1px; }
+  50% {
+    border-bottom: blue solid 1px; }
+  100% {
+    border-left: blue solid 1px; } }
+.skills__head-name, .skills__sepertor, .skills__container {
+  position: relative;
+  left: 50px;
+  width: 90%; }
+
+@keyframes skill-progress-bar {
+  from {
+    width: 1%; }
+  to {
+    width: 80%; } }
+.header {
+  width: 100%;
+  height: 14vh;
+  background-color: #28112b;
+  position: fixed;
+  font-family: "Kalam";
+  color: #8DAA91;
+  border-bottom: #788475 solid 2px;
+  top: 0px; }
+
+.header__logo {
+  float: left;
+  position: relative;
+  top: 4.6666666667vh;
+  left: 3.5vh;
+  font-size: 20px; }
+
+.menu {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 130px;
+  margin-top: 0px;
+  font-family: "Roboto Condensed"; }
+
+.menu__item {
+  list-style: none;
+  padding: 4.6666666667vh 20px; }
+  .menu__item:hover {
+    background-color: #8DAA91;
+    border-bottom: #5e5d5c solid 4px;
+    color: #28112b; }
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #28112b;
+  color: #8DAA91; }
+
+.bio {
+  background-image: linear-gradient(to right, #453643, #8DAA91); }
+
+.bio__container {
+  width: 50%;
+  position: relative;
+  top: 14vh;
+  left: 50px; }
+
+.bio__name {
+  font-family: "Parisienne-Regular";
+  font-size: 60px; }
+
+.bio__title {
+  font-family: "Kalam"; }
+
+.bio__description {
+  font-family: "Roboto Condensed";
+  width: 75%; }
+
+.bio__button {
+  font-family: "Kalam";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #788475;
+  border-radius: 5px;
+  box-shadow: bottom 2px; }
+  .bio__button:hover {
+    background-color: #788475;
+    color: #28112b; }
+  .bio__button :visited {
+    border: #453643 solid 1px; }
+
+.skills {
+  position: relative;
+  top: -40px;
+  background-image: linear-gradient(to right, #453643, #5e5d5c); }
+
+.skills__head-name {
+  font-family: "Parisienne-Regular";
+  top: 50px;
+  font-size: 60px; }
+
+.skills__sepertor {
+  top: 60px; }
+
+.skills__container {
+  position: relative;
+  top: 90px;
+  left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.skills__item {
+  margin: 20px 0;
+  width: 230px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #8DAA91;
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-rows: 20px auto; }
+
+.skills__item__icon {
+  grid-column: 1 / 2;
+  grid-row: 1/3;
+  border-radius: 50%;
+  height: 50px; }
+
+.skills__item__name {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-transform: capitalize;
+  color: #453643;
+  padding-left: 5px; }
+
+.skills__item__value-bar {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: 80%;
+  height: 5px;
+  background-color: #453643;
+  border-radius: 5px;
+  margin-top: 10px;
+  animation-name: skill-progress-bar;
+  animation-duration: 2s;
+  animation-delay: 1s; }
+
+/*# sourceMappingURL=index-bem.css.map */
