@@ -45,4 +45,77 @@
     border-bottom: #5e5d5c solid 4px;
     color: #28112b; }
 
+.footer {
+  width: 100%;
+  height: fit-content;
+  background-color: #28112b;
+  bottom: 1px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.footer__copyrights {
+  text-transform: capitalize;
+  font-size: 12px;
+  color: #8DAA91;
+  font-family: "Kalam";
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer__sociallink {
+  list-style-type: none;
+  font-family: "Kalam";
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto; }
+  .footer__sociallink:hover {
+    padding: 0px 5px; }
+  .footer__sociallink:hover .sociallink__description {
+    display: block;
+    padding: 0px 5px; }
+
+.sociallink__description {
+  display: none; }
+
+.footer__quote {
+  font-family: "Parisienne-Regular";
+  font-size: 25px;
+  font-weight: bold;
+  color: #8DAA91;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer__hire-me {
+  color: #8DAA91;
+  font-family: "Kalam"; }
+
+i {
+  margin: 5px; }
+
+.fas, .fab, .fal, a {
+  color: #8DAA91; }
+
+.active {
+  display: block; }
+
+.button {
+  font-family: "Kalam";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #788475;
+  border-radius: 5px;
+  box-shadow: bottom 2px; }
+  .button:hover {
+    background-color: #788475;
+    color: #28112b; }
+  .button :visited {
+    border: #453643 solid 1px; }
+
 /*# sourceMappingURL=index.css.map */
