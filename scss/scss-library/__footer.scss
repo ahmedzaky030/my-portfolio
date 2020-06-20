@@ -52,8 +52,8 @@
 }
 
 .footer__hire-me {
-    color: $primary-color;
     font-family: $subheading-font;
+    color: $fifth-color;
 }
 
 i {
@@ -80,6 +80,7 @@ i {
             background-color: $fourth-color;
             border-radius: 5px;
             box-shadow: bottom 2px;
+            color: $primary-color;
 
             &:hover {
                 background-color: $fourth-color;

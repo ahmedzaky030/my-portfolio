@@ -24,6 +24,9 @@ $heading-font: 'Parisienne-Regular';
 $subheading-font: 'Kalam';
 $paragraph-font:'Roboto Condensed';
 
+$person-height: 160px;
+$person-width: 180px;
+
 
 %section-shared {
     width: 100%;
@@ -105,4 +108,21 @@ i {
                 border: $secondary-color solid 1px;
 
             }
+}
+
+@for $var from 2011 to 2021 {
+
+    .y-#{$var} {
+        left: calc((#{$var} - 2011) / 10 * 70%);
+    }
+
+    .y-#{$var}-a {
+        left: calc(calc((#{$var} - 2011) / 10) + 2px);
+    }
+
+
+
+
+
+
 }
