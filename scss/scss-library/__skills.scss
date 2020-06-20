@@ -1,7 +1,5 @@
 .skills {
     @extend %section-shared;
-    position: relative;
-    top: -40px;
     background-image: linear-gradient(to right, $secondary-color, $third-color);
 }
 

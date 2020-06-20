@@ -37,10 +37,11 @@
     background-color: $fourth-color;
     border-radius: 5px;
     box-shadow: bottom 2px;
+    color: $primary-color;
 
     &:hover {
         background-color: $fourth-color;
-        color: $primary-color;
+        
     }
 
     & :visited {

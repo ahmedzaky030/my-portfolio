@@ -69,3 +69,40 @@ $paragraph-font:'Roboto Condensed';
 
     ;
 }
+
+
+i {
+    margin: 5px;
+}
+
+.fas , .fab , .fal , a {
+    color: $fifth-color;
+}
+
+.active {
+    display: block;
+}
+
+.button {
+    font-family: $subheading-font;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            padding: 5px;
+            margin-top: 10px;
+            background-color: $fourth-color;
+            border-radius: 5px;
+            box-shadow: bottom 2px;
+
+            &:hover {
+                background-color: $fourth-color;
+                color: $primary-color;
+            }
+
+            & :visited {
+                border: $secondary-color solid 1px;
+
+            }
+}
