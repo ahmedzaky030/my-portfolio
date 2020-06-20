@@ -28,21 +28,22 @@
 }
 
 .skills__item {
-    margin: 20px 0;
-                width: 230px;
-                height: 50px;
-                border-radius: 5px;
-                background-color: $fifth-color;
-                display: grid;
-                grid-template-columns: 70px auto;
-                grid-template-rows: 20px auto;
+    margin: 15px 0;
+    width: 230px;
+    height: 54px;
+    border-radius: 5px;
+    background-color: #8DAA91;
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-rows: 20px auto;
 }
 
 .skills__item__icon {
     grid-column: 1 / 2;
                     grid-row: 1/3;
-                    border-radius: 50%;
+                    border-radius: 60%;
                     height: 50px;
+                    padding: 0px 2px;
 
 }
 
@@ -52,6 +53,8 @@
     text-transform: capitalize;
     color: $secondary-color;
     padding-left: 5px;
+    font-family: $subheading-font;
+    font-weight: bold;
 }
 
 .skills__item__value-bar {
