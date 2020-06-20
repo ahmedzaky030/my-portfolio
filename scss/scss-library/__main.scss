@@ -1,0 +1,13 @@
+.main {
+    width: 100%;
+    height: fit-content;
+    background-color: $primary-color;
+    color: $fifth-color;
+}
+
+@import './_bio';
+@import './_skills';
+@import './_footer';
+@import './_experience';
+@import './_service';
+

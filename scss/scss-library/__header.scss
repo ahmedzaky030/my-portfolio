@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    height: $header-height;
+    background-color: $primary-color;
+    position: fixed;
+    font-family: $subheading-font;
+    color: $fifth-color;
+    border-bottom: $fourth-color solid 2px;
+    top:0px;
+}
+
+.header__logo {
+    float: left;
+    position: relative;
+    top: $header-height / 3;
+    left: $header-height / 4;
+    font-size: 20px;
+}
+
+.menu {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 130px;
+    margin-top: 0px;
+    font-family: $paragraph-font;
+}
+
+.menu__item {
+    list-style: none;
+    padding: ($header-height / 3)  20px;
+
+    &:hover {
+        background-color: $fifth-color;
+        border-bottom: $third-color solid 4px;
+        color: $primary-color;
+    }
+}
