@@ -7,33 +7,55 @@
     color: $fifth-color;
     border-bottom: $fourth-color solid 2px;
     top:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
-    float: left;
-    position: relative;
-    top: $header-height / 3;
-    left: $header-height / 4;
+    margin:20px;
     font-size: 20px;
 }
 
 .menu {
-    float: right;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    position: relative;
-    right: 130px;
     margin-top: 0px;
     font-family: $paragraph-font;
 }
 
 .menu__item {
     list-style: none;
-    padding: ($header-height / 3)  20px;
+    width: 20%;
 
     &:hover {
         background-color: $fifth-color;
         border-bottom: $third-color solid 4px;
         color: $primary-color;
     }
+}
+
+
+@media only screen and (max-width : 600px){
+    .header__logo {
+        display: none;
+        margin:5px 5px 0px 0px;
+    }
+    
+    .menu{
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .menu__item {
+        padding: 3em 0;
+        text-align: center;
+        border-radius: 5%;
+
+    }
+    
+
+    
 }

@@ -1,14 +1,16 @@
 .bio {
     @extend %section-shared;
-    background-image: linear-gradient(to right, $secondary-color, $fifth-color);
+    //background-image: linear-gradient(to right, $secondary-color, $fifth-color);
+    background-color: $secondary-color;
 }
 
 // to not conflict with container from bootstrap
 .bio__container {
-    width: 50%;
+    width: 75%;
     position: relative;
     top: $header-height;
     left: 50px;
+    
 }
 
 .bio__name {
@@ -18,11 +20,13 @@
 
 .bio__title {
     font-family: $subheading-font;
+    font-size: 2em;
 }
 
 .bio__description {
     font-family: $paragraph-font;
-    width: 75%;
+    width: 100%;
+    font-size: 2em;
 }
 
 .bio__button {
@@ -30,7 +34,7 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    width: 100px;
+    width: 25%;
     height: 50px;
     padding: 5px;
     margin-top: 10px;
@@ -47,4 +51,30 @@
     & :visited {
         border: $secondary-color solid 1px;
     }
+}
+
+@media only screen and (max-width : 600px){
+    .bio__container {
+        
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        
+    }
+
+    .bio {
+        width: 100%;
+        background-color: $secondary-color;
+    }
+
+    .bio__title , .bio__name ,.bio__description , .bio__button {
+        margin : 2rem 0;
+    }
+
+    .bio__button{
+        font-size: 2em;
+        width: 25%;
+    }
+
+
 }
