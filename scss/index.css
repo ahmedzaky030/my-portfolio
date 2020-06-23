@@ -55,6 +55,7 @@ i {
   padding: 5px;
   margin-top: 10px;
   background-color: #788475;
+  color: #28112b;
   border-radius: 5px;
   box-shadow: bottom 2px; }
   .button:hover {
@@ -132,25 +133,27 @@ i {
   color: #8DAA91;
   border-bottom: #788475 solid 2px;
   top: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: 10% 40% auto; }
 
 .header__logo {
-  margin: 20px;
-  font-size: 20px; }
+  grid-column: 1/2;
+  margin: 2rem;
+  font-size: 2rem; }
 
 .menu {
+  grid-column: 3/4;
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 0px;
-  font-family: "Roboto Condensed"; }
+  font-family: "Roboto Condensed";
+  justify-content: center; }
 
 .menu__item {
   list-style: none;
-  width: 20%; }
+  width: 20%;
+  text-align: center;
+  padding-top: 2em; }
   .menu__item:hover {
     background-color: #8DAA91;
     border-bottom: #5e5d5c solid 4px;
@@ -161,14 +164,9 @@ i {
     display: none;
     margin: 5px 5px 0px 0px; }
 
-  .menu {
-    width: 100%;
-    justify-content: space-between; }
-
-  .menu__item {
-    padding: 3em 0;
-    text-align: center;
-    border-radius: 5%; } }
+  .header {
+    display: flex;
+    height: 7vh; } }
 .main {
   width: 100%;
   height: fit-content;
@@ -556,25 +554,6 @@ a {
 
 .active {
   display: block; }
-
-.button {
-  font-family: "Kalam";
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  width: 100px;
-  height: 50px;
-  padding: 5px;
-  margin-top: 10px;
-  background-color: #788475;
-  border-radius: 5px;
-  box-shadow: bottom 2px;
-  color: #28112b; }
-  .button:hover {
-    background-color: #788475;
-    color: #28112b; }
-  .button :visited {
-    border: #453643 solid 1px; }
 
 .redundant-detials {
   display: block; }
