@@ -1,9 +1,9 @@
 .footer {
-    width:100%;
+    width: 100%;
     position: static;
-    height:fit-content;
+    height: fit-content;
     background-color: $primary-color;
-    
+
     bottom: 1px;
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +30,8 @@
     &:hover {
         padding: 0px 5px;
     }
-     &:hover .sociallink__description {
+
+    &:hover .sociallink__description {
         display: block;
         padding: 0px 5px;
     }
@@ -40,7 +41,7 @@
     display: none;
 }
 
-.footer__quote{
+.footer__quote {
     font-family: $heading-font;
     font-size: 25px;
     font-weight: bold;
@@ -48,7 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .footer__hire-me {
@@ -60,7 +61,10 @@ i {
     margin: 5px;
 }
 
-.fas , .fab , .fal , a {
+.fas,
+.fab,
+.fal,
+a {
     color: $fifth-color;
 }
 
@@ -68,27 +72,34 @@ i {
     display: block;
 }
 
-.button {
-    font-family: $subheading-font;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            width: 100px;
-            height: 50px;
-            padding: 5px;
-            margin-top: 10px;
-            background-color: $fourth-color;
-            border-radius: 5px;
-            box-shadow: bottom 2px;
-            color: $primary-color;
 
-            &:hover {
-                background-color: $fourth-color;
-                color: $primary-color;
-            }
 
-            & :visited {
-                border: $secondary-color solid 1px;
+.redundant-detials {
+    display: block;
+}
 
-            }
+
+@media only screen and (max-width : 600px) {
+    .footer__quote {
+        display: none;
+    }
+
+    .footer {
+        height: 12vh;
+    }
+
+    .footer__sociallink {
+        &:hover {
+            margin: 5px;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .redundant-detials {
+        display: none;
+    }
 }

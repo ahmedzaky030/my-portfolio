@@ -68,12 +68,22 @@
     & input[type="radio"]:checked {
         background-color: $fifth-color;
     }
-
-
-
-
 }
 
 .tab-content.active {
     display: block;
+}
+
+.form-groups-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width:600px){
+    .services-container{
+        height:60%;
+        top:20%;
+    }
 }
