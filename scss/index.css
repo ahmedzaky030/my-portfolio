@@ -153,7 +153,8 @@ i {
   list-style: none;
   width: 20%;
   text-align: center;
-  padding-top: 2em; }
+  padding-top: 2em;
+  padding-bottom: 2em; }
   .menu__item:hover {
     background-color: #8DAA91;
     border-bottom: #5e5d5c solid 4px;
@@ -452,7 +453,7 @@ i {
 @media only screen and (max-width: 600px) {
   .experience__timeline {
     width: 5px;
-    height: 70vh; }
+    height: 75vh; }
 
   .timeline__point-circle {
     top: 0px; }
@@ -652,6 +653,16 @@ i {
 .tab-content.active {
   display: block; }
 
+.form-groups-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+@media only screen and (max-width: 600px) {
+  .services-container {
+    height: 60%;
+    top: 20%; } }
 @media only screen and (max-width: 600px) {
   body {
     width: 108vw; } }
