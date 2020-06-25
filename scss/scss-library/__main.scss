@@ -11,3 +11,11 @@
 @import './_experience';
 @import './_service';
 
+
+@media only screen and (max-width:600px){
+    
+
+    body {
+        width : 108vw;
+    }
+}
